@@ -13,6 +13,8 @@ import java.awt.BorderLayout;
 import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -68,12 +70,19 @@ public class GuiWindow {
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.getContentPane().setLayout(null);
 		
-		JToggleButton tglbtnButton = new JToggleButton("More");
+		JToggleButton tglbtnButton = new JToggleButton("Help");
 		tglbtnButton.setBounds(322, 222, 139, 53);
 		frame.getContentPane().add(tglbtnButton);
 		
 		JToggleButton tglbtnButton_1 = new JToggleButton("Login");
+		tglbtnButton_1.setBackground(Color.GRAY);
 		tglbtnButton_1.setBounds(320, 42, 139, 55);
+		tglbtnButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) { 
+				
+				Login nw = new Login();
+				nw.login();
+			}});
 		frame.getContentPane().add(tglbtnButton_1);
 		
 		JToggleButton tglbtnButton_2 = new JToggleButton("Sign up");
