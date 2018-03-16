@@ -74,6 +74,12 @@ public class Login {
 		panel_1.add(label);
 		
 		JButton btnHelp = new JButton("Next");
+		btnHelp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		btnHelp.setBackground(SystemColor.controlHighlight);
 		btnHelp.setBounds(267, 236, 117, 29);
 		frame.getContentPane().add(btnHelp);

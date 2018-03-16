@@ -71,6 +71,13 @@ public class GuiWindow {
 		frame.getContentPane().setLayout(null);
 		
 		JToggleButton tglbtnButton = new JToggleButton("Help");
+		tglbtnButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Help nw = new Help();
+				nw.help();
+				frame.dispose();
+			}
+		});
 		tglbtnButton.setBounds(322, 222, 139, 53);
 		frame.getContentPane().add(tglbtnButton);
 		
@@ -85,14 +92,14 @@ public class GuiWindow {
 			}});
 		frame.getContentPane().add(tglbtnButton_1);
 		
-		JToggleButton tglbtnButton_2 = new JToggleButton("Sign up");
+		JToggleButton tglbtnButton_2 = new JToggleButton("Problem");
 		tglbtnButton_2.setBounds(319, 133, 139, 55);
 		frame.getContentPane().add(tglbtnButton_2);
 		
 		JLabel label = new JLabel("");
 		label.setBounds(-5, -2, 520, 324);
 		frame.getContentPane().add(label);
-		label.setIcon(new ImageIcon(GuiWindow.class.getResource("/gui/123.jpg")));
+		label.setIcon(new ImageIcon(GuiWindow.class.getResource("/images/123.jpg")));
 		frame.setBounds(100, 100, 513, 344);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setLocationRelativeTo(null);
