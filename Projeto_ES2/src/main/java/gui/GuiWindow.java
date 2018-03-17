@@ -65,7 +65,7 @@ public class GuiWindow {
 	 */
 	public GuiWindow() {
 		
-		frame = new JFrame();
+		frame = new JFrame("Problem Optimization Software");
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.getContentPane().setLayout(null);
@@ -75,15 +75,14 @@ public class GuiWindow {
 			public void actionPerformed(ActionEvent e) {
 				Help nw = new Help();
 				nw.help();
-				frame.dispose();
 			}
 		});
-		tglbtnButton.setBounds(322, 222, 139, 53);
+		tglbtnButton.setBounds(254, 311, 186, 53);
 		frame.getContentPane().add(tglbtnButton);
 		
 		JToggleButton tglbtnButton_1 = new JToggleButton("Login");
 		tglbtnButton_1.setBackground(Color.GRAY);
-		tglbtnButton_1.setBounds(320, 42, 139, 55);
+		tglbtnButton_1.setBounds(254, 74, 186, 55);
 		tglbtnButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { 
 				
@@ -93,14 +92,20 @@ public class GuiWindow {
 		frame.getContentPane().add(tglbtnButton_1);
 		
 		JToggleButton tglbtnButton_2 = new JToggleButton("Problem");
-		tglbtnButton_2.setBounds(319, 133, 139, 55);
+		tglbtnButton_2.setBounds(254, 195, 186, 53);
+		tglbtnButton_2.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) { 
+			
+			Problems nw = new Problems();
+			nw.Problems();
+		}});
 		frame.getContentPane().add(tglbtnButton_2);
 		
 		JLabel label = new JLabel("");
-		label.setBounds(-5, -2, 520, 324);
+		label.setBounds(-5, -2, 689, 434);
 		frame.getContentPane().add(label);
 		label.setIcon(new ImageIcon(GuiWindow.class.getResource("/images/123.jpg")));
-		frame.setBounds(100, 100, 513, 344);
+		frame.setBounds(100, 100, 684, 454);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setLocationRelativeTo(null);
 	    frame.setVisible(true);
