@@ -63,13 +63,26 @@ public class Mails extends JFrame {
 		btnEnviar.setBounds(36, 195, 117, 29);
 		contentPane.add(btnEnviar);
 		
-		JButton btnSend = new JButton("Send");
-		btnSend.setBounds(154, 195, 117, 29);
-		contentPane.add(btnSend);
-		
 		JTextArea textArea = new JTextArea();
 		textArea.setToolTipText("");
 		textArea.setBounds(39, 41, 232, 29);
+		
+
+		
+		JButton btnSend = new JButton("Send");
+		btnSend.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			SendMail m = new SendMail();
+			m.sendFromGMail2(textArea.getText(), txtrEscrevaAquiAs.getText(),"textarea para email","textarea para pass");
+			}
+		});
+		
+		btnSend.setBounds(154, 195, 117, 29);
+		contentPane.add(btnSend);
+		
+//		JTextArea textArea = new JTextArea();
+//		textArea.setToolTipText("");
+//		textArea.setBounds(39, 41, 232, 29);
 		contentPane.add(textArea);
 		
 		JLabel lblSubject = new JLabel("Subject:");

@@ -23,8 +23,10 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.JMenuBar;
 import javax.swing.JTextField;
@@ -122,6 +124,16 @@ public class Problems extends JFrame {
 		contentPane.add(lblMaxtime);
 		
 		JButton btnNewButton_1 = new JButton("Optimize");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+				Date date = new Date();
+				 //2016/11/16 12:08:43
+			SendMail m = new SendMail();
+			m.sendFromGMail("Optimização em curso:"+textArea.getText()+" "+dateFormat.format(date),
+					"Muito obrigado por usar esta plantaforma de otimização" ,"file_directory",textArea_2.getText());
+			}
+		});
 		btnNewButton_1.setBounds(561, 397, 117, 29);
 		contentPane.add(btnNewButton_1);
 		

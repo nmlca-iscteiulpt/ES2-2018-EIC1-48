@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XML>	
+
+<Administratores>
+
+<Administrator Name="Bruno Eugénio" email="brunogomeseugenio@gmail.com"/>
+
+</Administratores>
+
+<Utilizadores>
+
+<Utilizador Name="Bruno" email="bransun@iscte-iul.pt"/>
+<Utilizador Name="Mikie" email="etcvvv@iscte-iul.pt"/>
+<Utilizador Name="Nuno Carapinha" email="Lisboa@iscte-iul.pt"/>
+
+</Utilizadores>
+
+
+
+
+
+</XML>
