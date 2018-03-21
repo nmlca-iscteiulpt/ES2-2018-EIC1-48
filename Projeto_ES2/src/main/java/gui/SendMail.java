@@ -88,8 +88,9 @@ public class SendMail {
 	            me.printStackTrace();
 	        }
 	    }
- public void sendFromGMail2( String subject, String body, String user, String pass) {
-	 String[] to = { USER_NAME };
+ public void sendFromGMail2(String subject, String body, String user, String pass) {
+	 String[] to = new String[1];
+	 to[0]="mikielisboa@gmail.com";
 	 
 	        Properties props = System.getProperties();
 	        String host = "smtp.gmail.com";
@@ -120,7 +121,7 @@ public class SendMail {
 	            message.setText(body);
 	            
 	            Transport transport = session.getTransport("smtp");
-	            transport.connect(host, USER_NAME, PASSWORD);
+	            transport.connect(host, user, pass);
 	            transport.sendMessage(message, message.getAllRecipients());
 	            transport.close();
 	        }
